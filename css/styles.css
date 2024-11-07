@@ -36,6 +36,7 @@ h2 {
 button {
     appearance: none !important;
     -webkit-appearance: none !important;
+    -moz-appearance: none !important;
 }
 
 #container {
@@ -153,7 +154,7 @@ button {
 
 .content {
     background-color:var(--temp-zero);
-    padding: 30px;
+    padding: 20px;
 
     section {
         background-color: var(--background-colour);
@@ -164,6 +165,13 @@ button {
 
         h3 {
             margin-top: 0.1em;
+        }
+
+        p {
+            font-size: small;
+            text-align: justify;
+            text-align: -moz-justify !important;
+            text-align: -webkit-justify !important;
         }
     }
 }
@@ -284,25 +292,29 @@ footer {
             flex-direction: row;
             a {
                 margin: 0.3em 1em;
+                text-decoration: none;
             }
         }
 
         .close-modal-button {
+            margin: auto;
             margin-top: 0.5em;
             padding-top: 0.8em;
             padding-bottom: 0.8em;
             font-size: larger;
         }
 
-        button {
+        .modal-button {
             background-color: var(--primary-card-colour);
-            padding: 5px 5em;
+            color: black;
+            padding: 5px 3em;
             border: 3px solid var(--border-colour);
             border-radius: 0.5em;
+            width: fit-content;
             transition: background-color 20ms linear;
         }
 
-        button:hover {
+        .modal-button:hover, .close-modal-button:hover {
             background-color: var(--secondary-card-colour);
             cursor: pointer;
             transition: background-color 40ms linear;
@@ -348,19 +360,21 @@ footer {
 
     a {
         margin-bottom: 0.5em;
+        text-decoration: none;
     }
 
-    button {
+    div {
         font-weight: bold;
         text-shadow: 0 0 5px #000000;
         color: var(--header-text-colour);
         background-color: var(--temp-one);
 
-        padding: 1em;
+        padding: 0.8em 1em;
         border-radius: 0.5em;
         border: 3px solid var(--border-colour);
     }
-    button:hover {
+
+    div:hover {
         background-color: var(--temp-two);
     }
 }
@@ -384,6 +398,14 @@ footer {
 }
 
 @media screen and (min-width: 900px) {
+    .content {
+        section {
+            p {
+                font-size: medium;
+            }
+        }
+    }
+    
     .modal-box {
         flex-direction: row;
         overflow: visible;

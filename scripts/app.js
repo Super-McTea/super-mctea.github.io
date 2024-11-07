@@ -83,7 +83,7 @@ function createModal(project) {
     let linkButtons = "";
     if (project.info.links) {
         for (link of project.info.links) {
-            linkButtons += `<a href="${link.url}" title="${link.hover}" target="_blank"><button class="modal-link">${link.text}</button></a>`
+            linkButtons += `<a href="${link.url}" title="${link.hover}" target="_blank"><div class="modal-button modal-link">${link.text}</div></a>`
         }
     }
 
@@ -115,7 +115,7 @@ function createModal(project) {
             `<h3>Links</h3><div class="link-container">`
                 + linkButtons +
             `</div><hr>` : ""}
-            <button class="close-modal-button" id="close-${project.id}">Go Back</button>
+            <div class="modal-button close-modal-button" id="close-${project.id}">Go Back</div>
         </div>
         <div class="modal-images-container">
             <h2>Gallery</h2>
@@ -125,6 +125,12 @@ function createModal(project) {
 
     cardModal.innerHTML = modalString;
     
+    cardModal.addEventListener('click', (e) => {
+        if(e.target !== e.currentTarget) return;
+        e.preventDefault();
+        cardModal.classList.remove('show');
+    })
+
     return cardModal;
 }
 
