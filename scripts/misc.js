@@ -198,7 +198,7 @@ const miscData = [
     {
         name: "Portfolio Page",
         id: "portfolio-page",
-        startDate: new Date(2024, 10, 4),
+        startDate: new Date(2024, 9, 31),
         endDate: new Date(2024, 10, 15),
 
         bg: "portfolio-page.png",
