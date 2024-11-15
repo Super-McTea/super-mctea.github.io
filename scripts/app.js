@@ -23,6 +23,7 @@ function createCard(project) {
         cardModal.children[0].children[0].scrollTop = 0;
         cardModal.children[0].children[1].scrollTop = 0;
         cardModal.classList.add('show');
+        body.classList.add('modal-open');
     });
 
     cards.appendChild(card);
@@ -32,6 +33,7 @@ function createCard(project) {
     closeButton.addEventListener('click', (event) => {
         event.preventDefault();
         cardModal.classList.remove('show');
+        body.classList.remove('modal-open');
     })
 }
 
@@ -58,6 +60,7 @@ function createTab(project) {
         cardModal.children[0].children[0].scrollTop = 0;
         cardModal.children[0].children[1].scrollTop = 0;
         cardModal.classList.add('show');
+        body.classList.add('modal-open');
     });
 
     miscs.appendChild(card);
@@ -67,6 +70,7 @@ function createTab(project) {
     closeButton.addEventListener('click', (event) => {
         event.preventDefault();
         cardModal.classList.remove('show');
+        body.classList.remove('modal-open');
     })
 }
 
@@ -129,6 +133,7 @@ function createModal(project) {
         if(e.target !== e.currentTarget) return;
         e.preventDefault();
         cardModal.classList.remove('show');
+        body.classList.remove('modal-open');
     })
 
     return cardModal;
@@ -140,6 +145,8 @@ const cards = document.getElementById('card-container');
 
 const miscs = document.getElementById('misc-container');
 const modals = document.getElementById('modals');
+
+const body = document.querySelector('body');
 
 // Sort the project data
 // Smaller number (generally) means older project, move further down

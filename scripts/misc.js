@@ -143,4 +143,134 @@ const miscData = [
             ]
         }
     },
+    {
+        name: "Front-End Development",
+        id: "rmit-fend",
+        startDate: new Date(2024, 6, 15),
+        endDate: new Date(2024, 10, 4),
+
+        bg: "rmit-fend.png",
+        primaryColour: "#E60028",
+        secondaryColour: "#142580",
+        backgroundColour: "#171A53",
+        textColour: "#F6F6F6",
+
+        sortPriority: 5,
+        info: {
+            description: "For a period of 4 months I underwent the online <strong>Front End Web Developer</strong> course offered by the Royal Melbourne Institute of Technology, in partnership with Udacity.<br><br>The course covered multiple topics regarding front-end web development, including: HTML5, CSS, JavaScript and the DOM, Web APIs and asynchronous applications, Build tools, Webpack, and Service Workers. In total, there were five assessment tasks which involved the creation of websites and code to meet the assessment criteria in a timely manner.",
+            contributions: `
+                Assessment One required the use of HTML5 and CSS to create a blog site which featured the use of both flex and grid layouts, used media queries to add mobile compatibility, and included both a main home page and a blog post page.<br><br>
+                
+                Assessment Two was an introduction to JavaScript and the Document Object Model, in which I was given a static landing page and tasked to add JavaScript to it to make it responsive. That included dynamically inserting new objects into the DOM via JavaScript, working with browser events to create interactive buttons and automatic scrolling, and a bit of performance optimisation through the JavaScript Event Loop.<br><br>
+                
+                Assessment Three was a task to create a weather journal app, making use of the fetch API and an express server. For this task, I had to learn to use Node.js and the express node package to build a server-side application, and develop a client-facing webpage that used the OpenWeatherMap API to gather information based on user input. The user would input a postcode in Australia, and the site would fetch the weather data for that postcode and store the information in the express server together with user-inputted text.<br><br>
+                
+                Assessment Four was a continuation on the previous task, that built upon the API fetching code by implementing webpack for optimisation and minification, sass and how it is used in a webpack project, and service workers to maintain functionality even when the server is disconnected. The task was to build a webapp that could evaluate a news article with natural language processing, such that the user would input a URL, and the application would pass the URL to the Meaning Cloud API in order to apply sentiment analysis, store the results on the express server, and display the results back to the user.<br><br>
+                
+                The Capstone Project was a Travel App, which used all of the skills learned in the previous assessments to build a tool that, from a user inputting a place name and date, would chain API calls to display the details of the location, the weather at the date specified, a countdown for how long until the specified date from the current date, and an image of the location. The APIs used for this project were the Geonames API, WeatherBit API, and Pixabay API. Unlike the previous projects, in which starter code was supplied, this project was built from scratch.`,
+            images: [
+                {
+                    caption: "A screenshot of the Capstone Project, a travel app",
+                    url: "rmit-fend/travel-app.png"
+                },   
+                {
+                    caption: "A screenshot of Assignment 3, a weather journal app",
+                    url: "rmit-fend/weather-site.png"
+                },
+                {
+                    caption: "A screenshot of Assignment 2, a landing page",
+                    url: "rmit-fend/landing-site.png"
+                },
+                {
+                    caption: "A screenshot of Assignment 1, a blog site",
+                    url: "rmit-fend/blog-site.png"
+                },
+            ],
+            links: [
+                {
+                    text: "Course Page on RMIT Site",
+                    url: "https://online.rmit.edu.au/course/sc-front-end-web-developer-dev102u",
+                    hover: "Front End Web Developer, offered by RMIT Online"
+                }
+            ]
+        }
+    },
+    {
+        name: "Portfolio Page",
+        id: "portfolio-page",
+        startDate: new Date(2024, 10, 4),
+        endDate: new Date(2024, 10, 15),
+
+        bg: "portfolio-page.png",
+        primaryColour: "#FFFFFF",
+        secondaryColour: "#1B263B",
+        backgroundColour: "#415A77",
+        textColour: "#E0E1DD",
+
+        sortPriority: 6,
+        info: {
+            description: "This portfolio page was created by me, following the completion of the Front End Web Developer course I attended. This site makes use of flex containers to arrange objects, and dynamically loads the project cards from a json list (including this one you're reading right now).",
+            contributions: "",
+            images: [
+                {
+                    caption: "A screenshot of the top-half of the portfolio page",
+                    url: "portfolio-page/one.png"
+                },   
+                {
+                    caption: "A screenshot of the bottom-half of the portfolio page",
+                    url: "portfolio-page/two.png"
+                }
+            ],
+            links: [
+                {
+                    text: "The Portfolio Page",
+                    url: "https://super-mctea.github.io/",
+                    hover: "Super McTea's Portfolio"
+                }
+            ]
+        }
+    },
+    {
+        name: "Conlang Lookup Tool",
+        id: "liang-lookup",
+        startDate: new Date(2024, 10, 2),
+        endDate: null,
+
+        bg: "liang-lookup.png",
+        primaryColour: "#FFFFFF",
+        secondaryColour: "#FDF6E2",
+        backgroundColour: "#FFEBCD",
+        textColour: "#222222",
+
+        sortPriority: 7,
+        info: {
+            description: "This site was created by me to practice using HTML, CSS, and JavaScript together in one project. In order to do so, I am using a conlang I created back in May 2021 (and am still working on), and created a lookup dictionary for all of the words and vocabulary I have come up with so far. People using the site can enter search terms in the search bar, and it will filter out only the cards which contain that string in them, sorted in alphabetical order (in the Liang alphabet).<br><br>Additionally, there is a page for searching for numbers, where I programmed an algorithm to procedurally generate any numbers that are entered into the search bar into their three possible forms: disjunctive, counting, and ordinal. An interesting thing to note about the numbers is that the rightmost digit is listed in full, but all of the other digits are written as prefixes only, and so the system had to account for that, as well as account for places where the place value suffixes needed to go, even when the digit at that place value is zero.",
+            contributions: "",
+            images: [
+                {
+                    caption: "A screenshot of the word search page",
+                    url: "liang-lookup/words.png"
+                },   
+                {
+                    caption: "A screenshot of the number search page",
+                    url: "liang-lookup/numbers.png"
+                },
+                {
+                    caption: "Searching for the word [Word]",
+                    url: "liang-lookup/word-search.png"
+                },   
+                {
+                    caption: "Searching for the number [184]",
+                    url: "liang-lookup/number-search.png"
+                }
+            ],
+            links: [
+                {
+                    text: "The Page",
+                    url: "https://super-mctea.github.io/liang-lookup",
+                    hover: "The Liang Lookup Tool"
+                }
+            ]
+        }
+    },
 ]

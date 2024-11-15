@@ -21,6 +21,10 @@ body {
     background-color: var(--background-colour);
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 h1 {
     color: var(--header-text-colour);
     -webkit-text-stroke: 0.04em black;
