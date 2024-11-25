@@ -244,7 +244,7 @@ const miscData = [
 
         sortPriority: 7,
         info: {
-            description: "This site was created by me to practice using HTML, CSS, and JavaScript together in one project. In order to do so, I am using a conlang I created back in May 2021 (and am still working on), and created a lookup dictionary for all of the words and vocabulary I have come up with so far. People using the site can enter search terms in the search bar, and it will filter out only the cards which contain that string in them, sorted in alphabetical order (in the Liang alphabet).<br><br>Additionally, there is a page for searching for numbers, where I programmed an algorithm to procedurally generate any numbers that are entered into the search bar into their three possible forms: disjunctive, counting, and ordinal. An interesting thing to note about the numbers is that the rightmost digit is listed in full, but all of the other digits are written as prefixes only, and so the system had to account for that, as well as account for places where the place value suffixes needed to go, even when the digit at that place value is zero.",
+            description: "This site was created by me to practice using HTML, CSS, and JavaScript together in one project. In order to do so, I am using a conlang I created back in May 2021 (and am still working on), and created a lookup dictionary for all of the words and vocabulary I have come up with so far. People using the site can enter search terms in the search bar, and it will filter out only the cards which contain that string in them, sorted in alphabetical order (in the Liang alphabet).<br><br>Additionally, there is a page for searching for numbers, where I programmed an algorithm to procedurally generate any numbers that are entered into the search bar into their three possible forms: disjunctive, counting, and ordinal. An interesting thing to note about the numbers is that the rightmost digit is listed in full, but all of the other digits are written as prefixes only, and so the system had to account for that, as well as account for places where the place value suffixes needed to go, even when the digit at that place value is zero.<br><br>There is also a page which lists the Liang alphabet, and if you enter text into the search bar on that page it will render it using the characters of the Liang language in real-time. To complement this system, I added support for URL Search Params in order to be able to share search results, or text rendered in the Alphabet page.",
             contributions: "",
             images: [
                 {
@@ -254,6 +254,10 @@ const miscData = [
                 {
                     caption: "A screenshot of the number search page",
                     url: "liang-lookup/numbers.png"
+                },  
+                {
+                    caption: "A screenshot of the alphabet search page",
+                    url: "liang-lookup/alphabet.png"
                 },
                 {
                     caption: "Searching for the word [Word]",
@@ -262,6 +266,10 @@ const miscData = [
                 {
                     caption: "Searching for the number [184]",
                     url: "liang-lookup/number-search.png"
+                },   
+                {
+                    caption: "Searching for the text [I am an apple]",
+                    url: "liang-lookup/alphabet-search.png"
                 }
             ],
             links: [
