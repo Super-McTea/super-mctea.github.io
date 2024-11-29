@@ -1,4 +1,5 @@
 const projectData = [
+    //#region Phoenix One
     {
         name: "Phoenix One",
         id: "phoenix-one",
@@ -15,7 +16,26 @@ const projectData = [
         sortPriority: 10,
         info: {
             description: "Phoenix One is a side-scrolling 2D run-and-gun game with both puzzle and action elements. You must race against your dimishing oxygen supply to eliminate all of the aliens using a unique ricochet mechanic, allowing you to progress level by level, room by room, and uncover what really happened... <br><br>Phoenix One is being developed in the Unity Game Engine by the L Stands for Winner team, who after one year of development as part of a University project have produced a demo that is available on Itch.io.<br><br>In October of 2023, the LSW team was invited to present the Phoenix One demo at SXSW Sydney as part of the Student Showcase, where the game was met with positive reception. We were able to use this opportunity as a live playtest of our demo, and together with other playtests at various events such as the monthly IGDA meetup \"Beer and Pixels\", we gathered a lot of useful feedback before our final project submission.",
-            contributions: "In this project, I am primarily responsible for creating the sprite art used for Astrid, the aliens, and all of the interactables. I also am the music composer for this project, having composed 6 unique tracks for all of the chapters. In terms of programming, I contributed by implementing the bullet rebound physics, implementing the aiming line for both Astrid and for the aliens, programming the ricochet alien, and the Mementos/Terminal system. I also created the animations for the aliens as well as Astrid, the various particle effects, and the initial version of the AudioManager. <br><br>Currently, I am working on optimising the ricochet alien algorithm and adding real-time 2D lighting to the project for some additional ambience and \"vibes\".",
+            data: [
+                "<h2>Contributions</h2>",
+
+                "In terms of programming, I contributed by:",
+                `<ul>
+                    <li>Implementing the physics for the bullets to ricochet using vectors and reflections</li>
+                    <li>Implementing a modular aiming line for both Astrid (the player character) and for the aliens</li>
+                    <li>Designing and creating the internal systems for the ricochet alien, including the aiming calculations as well as optimisations</li>
+                    <li>Programming the Mementos/Terminal system, which reads data from a JSON file and then dynamically displays it, allowing for ease of editing and potential for modding in the future</li>
+                    <li>Prototyping the AudioManager, which handles the triggering of the background music and sound effects</li>
+                </ul>`,
+                "I also contributed to the audio-visual design by:",
+                `<ul>
+                    <li>Designing the concept art used for Astrid, the aliens, and all of the level objects (i.e. anything which isn't the tile map)</li>
+                    <li>Creating the sprite pixel-art for all the concepts, as well as their animations</li>
+                    <li>Designing the particle effects for the bullets, the player's hover, and the player's dash</li>
+                    <li>Composing 6 unique tracks for this project, one for each chapter (with more in progress for the missing chapters)</li>
+                </ul>`,
+                `Currently, I am working on optimising the ricochet alien algorithm and adding real-time 2D lighting to the project.`
+            ],
             images: [
                 {
                     caption: "The Phoenix One Main Menu",
@@ -43,6 +63,8 @@ const projectData = [
             ]
         }
     },
+    //#endregion
+    //#region Micro Macros
     {
         name: "Micro Macros",
         id: "micro-macro",
@@ -59,7 +81,7 @@ const projectData = [
         sortPriority: 0,
         info: {
             description: "You were writing a report, when your Microsoft office subscription ran out! You can still retrieve your files, however! The usual WASD controls have betrayed you! Somebody programmed this bot to move with... macros! Think creatively as you employ these macros to navigate the mazes and retrieve your files! <br><br> This game was created for a 48-hour Game Jam with the theme \"Micro/Macro\", and a constraint of a \"3 colour palette\". ",
-            contributions: "",
+            data: [ ],
             images: [
                 {
                     caption: "The main menu screen",
@@ -79,6 +101,8 @@ const projectData = [
             ]
         }
     },
+    //#endregion
+    //#region Tree Game
     {
         name: "Tree Game",
         id: "tree-game",
@@ -95,7 +119,17 @@ const projectData = [
         sortPriority: 2,
         info: {
             description: "Tree Game is simple idle clicking game where you revive barren fields with a host of colourful apple trees and by growing as many apples as you can. <br><br>This game was developed by L Stands for Winner in the Unity Game Engine for a 48-hour Game Jam with the theme \"Revive\", and a constraint to include something from the Public Domain. We won the People's Choice award for Tree Game. ",
-            contributions: "In this project, I was one of the lead software developers. I was in charge of making the trees, making the plots, making trees plantable in plots, making them grow apples, and the functionality for collecting the apples into the InvenTree.",
+            data: [
+                "<h2>Contributions</h2>",
+                "As one of the lead software developers, I contributed to the codebase by:",
+                `<ul>
+                    <li>Designing and implementing the tree planting system, specifically the way in which plots and trees interact, and how the fruit interact with the trees</li>
+                    <li>Programming the modular fruit spawning system, which allowed trees to grow and manage their own apples independently of each other</li>
+                    <li>Implementing the code to allow trees to be removed from their plots, in order for the tree removal system to function</li>
+                    <li>Implementing the InvenTree system to allow grafting results to be stored and then later planted, keeping track of which tree types and how many were being held</li>
+                </ul>`,
+                "In addition, I was also deeply involved with optimisations, quality assurance, and bug fixes."
+            ],
             images: [
                 {
                     caption: "Plots of land filled with various trees",
@@ -119,6 +153,8 @@ const projectData = [
             ]
         }
     },
+    //#endregion
+    //#region Protect the Presidevs
     {
         name: "Protect The Presidevs!",
         id: "protect-the-presidevs",
@@ -134,8 +170,17 @@ const projectData = [
 
         sortPriority: 1,
         info: {
-            description: "Play as the Godot engine, using your magnetic powers to alter the course of unreasonable fees headed towards your Presidevs. For every Presidev that gets charged by the Unity monkey, you will be one step closer to going bankrupt. The more Presidevs you can keep afloat with your magnets, the more points you stand to gain! Though if more than half your Presidevs get wiped out by the crazy fees you lose.<br><br>This game was developed in the Godot Game Engine by the L Stands for Winner team for a 48-hour Game Jam with the theme \"Magnet\", and the constraint that the camera must remain stationary. ",
-            contributions: "In this project, I was one of the lead software developers, specifically in charge of programming the player movement, the magnetic field, the projectile collisions, and the projectile movement. As well as general bug fixes.",
+            description: "Play as the Godot engine, using your magnetic powers to alter the course of unreasonable fees headed towards your Presidevs. For every Presidev that gets charged by the Unity monkey, you will be one step closer to going bankrupt. The more Presidevs you can keep afloat with your magnets, the more points you stand to gain! Though if more than half your Presidevs get wiped out by the crazy fees you lose.<br><br>This game was developed in the Godot Game Engine by the L Stands for Winner team around the same time as the Unity runtime fee controversy, for a 48-hour Game Jam with the theme \"Magnet\", and the constraint that the camera must remain stationary. ",
+            data: [
+                "<h2>Contributions</h2>",
+                "As one of the lead software developers in this project, my contributions included:",
+                `<ul>
+                    <li>Implementing the player movement and the projectile movement using GDScript</li>
+                    <li>Programming the collisions between the player, projectile, and the Presidevs</li>
+                    <li>Designing and implementing the magnetic field system, specifically how the projectiles' motion is affected by the magnet</li>
+                </ul>`,
+                "I was also heavily involved in quality assurance, optimisations, and general bug fixes."
+            ],
             images: [
                 {
                     caption: "The main menu screen",
@@ -155,8 +200,10 @@ const projectData = [
             ]
         }
     },
+    //#endregion
+    //#region We Only Make SOUP
     {
-        name: "we only make SOUP",
+        name: "We Only Make SOUP",
         id: "we-only-make-soup",
         shortDescription: "Who let him cook ???",
         startDate: new Date(2024, 0, 13),
@@ -170,8 +217,17 @@ const projectData = [
 
         sortPriority: 3,
         info: {
-            description: "In this fast-paced arcade game, you must fulfil soup orders while fending off unwanted ingredients with the help of Jeff the Chef! Guide Jeff in defending the soup pot and gather ingredients for your recipes. Fulfil as many orders as you can before you're overwhelmed...<br><br>This game was developed by L Stands for Winner in the Unity Game Engine for the Pixel Jam, a Game Jam hosted by the <a href=\"https://pixelpasture.studio/\" target=\"_blank\">Pixel Pasture Studio</a> with the theme \"Food\" and constraint \"Patterns\". ",
-            contributions: "In this project I was primarily the music composer, but I was also responsible for handling the particle effects and implementing the audio system.",
+            description: "In this fast-paced arcade game, you must fulfil soup orders while fending off unwanted ingredients with the help of Jeff the Chef! Guide Jeff in defending the soup pot and gather ingredients for your recipes. Fulfil as many orders as you can before you're overwhelmed...<br><br>This game was developed by L Stands for Winner in the Unity Game Engine for the Pixel Jam, a Game Jam hosted by the <a href=\"https://pixelpasture.studio/\" target=\"_blank\">Pixel Pasture Studio</a> with the theme \"Food\" and constraint \"Patterns\". Out of 22 participating teams, our team came 6th place.",
+            data: [
+                "<h2>Contributions</h2>",
+                "As a software developer on this team, my contributions include:",
+                `<ul>
+                    <li>Designing and implementing the particle effects for the food items, including the random variation and distribution.</li>
+                    <li>Creating the animations for the chickens through the use of a modular rotation script and sprite animation</li>
+                    <li>Implementing the system for playing the background music, and the sound effects of the food items being destroyed</li>
+                </ul>`,
+                "I also composed the background music for this project."
+            ],
             images: [
                 {
                     caption: "The main menu screen for we only make SOUP",
@@ -196,6 +252,8 @@ const projectData = [
             ]
         }
     },
+    //#endregion
+    //#region Oscilloskate
     {
         name: "Oscilloskate",
         id: "oscilloskate",
@@ -207,12 +265,24 @@ const projectData = [
         primaryColour: "#aeffd9",
         secondaryColour: "#2c8d95",
         backgroundColour: "#323232",
-        textColour: "#aeffd9",
+        textColour: "#e0ffff",
 
         sortPriority: 4,
         info: {
             description: "Oscilloskate is an infinite runner arcade game where an oscilloscope swaps between two modes, analogue and digital, and the player has to use the appropriate mouse controls to stay on the wave. <br><br>This game was developed by L Stands for Winner in the Unity Game Engine for a 48-hour Game Jam with the theme \"Analogue\", and constraint \"include a mouse control\". ",
-            contributions: "In this project, I programmed the wave generator and display, using a perlin noise generator producing values with offsets to be passed to a line renderer. I also composed the music for this game, two versions of the same theme with one to represent analogue and one for digital.",
+            data: [
+                "<h2>Contributions</h2>",
+                "In this project, I was responsible for:",
+                `<ul>
+                    <li>Programming the wave generator, by using a perlin noise generator and writing a modular function to pass in offsets and switch noise types in realtime</li>
+                    <li>Implementing the wave display using a line renderer with a dynamically generated string of points, such that each point would read the noise value and compute its own offset and height with respect to time</li>
+                    <li>Designing and implementing the transition system, to move from the Analogue state to the Digital state seamlessly</li>
+                    <ul>
+                        <li>This also includes switching the game state, switching the player controls over, and smoothing out the analogue line to meet the static state without any sharp angles</li>
+                    </ul>
+                </ul>`,
+                "I also composed the background music for this game; two tracks with the same melody and structure, with one designed to represent \"Analogue\" and the other \"Digital\"."
+            ],
             images: [
                 {
                     caption: "The main menu screen",
@@ -236,6 +306,8 @@ const projectData = [
             ]
         }
     },
+    //#endregion
+    //#region Personal Space
     {
         name: "Personal Space",
         id: "personal-space",
@@ -252,7 +324,19 @@ const projectData = [
         sortPriority: 5,
         info: {
             description: "Fly around in the depths of space while avoiding the spaceships trying to \"re-enter\" your atmosphere! Those pesky ships have gone too far and you've finally had enough! Well, it seems the only option is to blow up the sun... Play the game by navigating your planet through the solar system and try to survive for as long as you can.<br><br>Personal Space is a game developed by L Stands for Winner in the Unity Game Engine for a 48-hour (later extended to 5-day) Game Jam with the theme \"Re-entry\", and constraint to \"include at least one astronomical phenomenon\". As a team, we won the People's Choice Award, and would then go on to present this game at Macquarie University as part of their annual Astronomy Open Night.",
-            contributions: "In this project I was responsible for the planet gravity; utilising Unity's physics engine to exert a semi-realistic force to heighten the difficulty of the game. I also programmed the spaceships' movement, and their reaction to the planet gravity (and susequently the Sun's gravity). I added some shaders to give the planets an atmosphere, and finally I also composed the music for this game.",
+            data: [
+                "<h2>Contributions</h2>",
+                "In this project, I was responsible for:",
+                `<ul>
+                    <li>Implementing the planet gravity system by utilising Unity's physics engine to exert a semi-realistic force, enough to heighten the difficulty of the game</li>
+                    <ul>
+                        <li>This also counted towards the constraint, since planets containing gravity are an astronomical phenomenon</li>
+                    </ul>
+                    <li>Programming the movement of the space shuttles to make them track towards the player, and more importantly be affected by the surrounding planets' gravity too</li>
+                    <li>Creating a set of shaders for the planets to give them a hazy atmosphere, which also serves as an indication of where the planet's range of gravity begins</li>
+                </ul>`,
+                "I was also particularly involved in bug fixing and quality assurance, and responsible for composing the background music for this game."
+            ],
             images: [
                 {
                     caption: "The main menu screen of the game",
@@ -272,6 +356,8 @@ const projectData = [
             ]
         }
     },
+    //#endregion
+    //#region Basement Game
     {
         name: "Basement Game",
         id: "basement-game",
@@ -288,7 +374,26 @@ const projectData = [
         sortPriority: 6,
         info: {
             description: "Basement Game is a 2.5D automation game in which you must secretly compete with your magically-inclined peers to pass an alchemy class using nothing but science and old-fashioned particle accelerators. Juggle paying power bills and completing assignments as you discover the cryptic process to manufacture gold from common metals within the dark and shadow-y confines of your basement.<br><br>This game was developed by L Stands for Winner in the Unity Game Engine for the 15th Pirate Software Game Jam, a 14-day Game Jam with the themes \"Alchemy\" and \"Shadows\". This was an ambitious project with the time we had available to us due to unforseen events taking our schedules, but we still managed to create something we could submit and learned many lessons about organisation and proper project structure.",
-            contributions: "In this project, I was the Creative Director and the Lead Developer. As such, I was in charge of outlining the project architecture and laying the groundwork for the game systems. While ambitious, I implemented classes to allow machines to communicate with each other and process materials from their inputs. Additionally, I wrote the code to allow for machines to be placed down in the game world and picked back up again, and implemented a saving/loading system which reconstructs the game scene from a JSON representation that is stored in the browser cache. A large part of the internal systems run off of JSON files, which allows us to expand these systems and modify them with ease. I also composed the music for this game. ",
+            data: [
+                "<h2>Contributions</h2>",
+                "For this project, I was the Creative Director as well as the Lead Developer. As such, I contributed to the design of the project by:",
+                `<ul>
+                    <li>Outlining the project architecture and laying the groundwork for the game systems</li>
+                    <li>Creating class diagrams and organising ERD Diagrams to facilitate the creation of these systems</li>
+                    <li>Maintaining spreadsheets to track task progress, as well as frequent meetings to touch base</li>
+                </ul>`,
+                "I also controbited to the codebase through:",
+                `<ul>
+                    <li>Programming the system to allow for machines to be modular and data-driven, which enabled us to easily modify, expand, and test our systems</li>
+                    <ul>
+                        <li>This included all the machine properties, recipes, and material data being stored in JSON files, which were then loaded and read from at runtime</li>
+                        <li>This also allowed for a saving-loading system to be easily implemented, by constructing a JSON representation of the machines and where they are placed in order to reconstruct the scene at runtime</li>
+                    </ul>
+                    <li>Implementing the necessary backend to allow a machine to be picked up by the mouse and placed down in the game world, aligned to the build grid</li>
+                    <li>Designing and implementing the class hierarchy system for machines to perform the correct recipes and pass their outputs to the correct connections</li>
+                </ul>`,
+                "I also composed the background music for the game, and assisted in the collection of sound effects."
+            ],
             images: [
                 {
                     caption: "The main menu screen",
@@ -317,6 +422,8 @@ const projectData = [
             ]
         }
     },
+    //#endregion
+    //#region The Very Hungry Anterpillar
     {
         name: "The Very Hungry Anterpillar",
         id: "ant-game",
@@ -333,7 +440,27 @@ const projectData = [
         sortPriority: 7,
         info: {
             description: "The Very Hungry Anterpillar tells the story of a small ant in a big room. Weave through an excessive amount of board game components as you attempt to avoid the barrage of boots. Collect as many chunks of bread as possible to stave off starvation and achieve eternal glory as the mite that has munched the most. <br><br>This game was developed in the Unity Game Engine by L Stands for Winner for the GMTK Game Jam, a 4-day Game Jam with the theme \"Built to Scale\". Outside of the game jam, a multiplayer version of this game is being developed by yours truly, Super McTea. ",
-            contributions: "In this project I was primarily the music composer, and the programmer of the boot timings and collision with the ant, as well as general bug fixing and code quality control. As of now, I am in charge of the multiplayer netcode implementation using Unity's Netcode for GameObjects package, as well as Unity Services packages Relay and Lobby. I have implemented sharing of information such as the location of props in the game world, and the location and state of breadcrumbs (which enables other ants to steal food from right under your antennae).",
+            data: [
+                "<h2>Contributions</h2>",
+                "In this project, I was primarily responsible for:",
+                `<ul>
+                    <li>Implementing the boot timing system, taking advantage of object pooling and making use of the round-robin scheduling algorithm</li>
+                    <li>Planning and programming the collisions between the player Ant, the boot, and the breadcrumbs in order to prevent bugs (other than the Ant)</li>
+                    <li>Composing the background music for the game</li>
+                </ul>`,
+                "After the Game Jam ended, I began work on an online multiplayer version of The Very Hungry Anterpillar, where I:",
+                `<ul>
+                    <li>Implemented the Unity Netcode for GameObjects package as part of Unity's online networking solution, specifically to handle synchronisation across multiple users</li>
+                    <ul>
+                        <li>The online game synchronises the map generation, the breadcrumb location, and the positions of the other ants (with nameplates)</li>
+                    </ul>
+                    <li>Installed and set-up Unity Relay and Unity Lobby, two of Unity's Gaming services, in order for secure peer-to-peer connections to be made without the need for dedicated servers</li>
+                    <ul>
+                        <li>This enabled the addition of a private hosting and public hosting mode</li>
+                    </ul>
+                    
+                </ul>`
+            ],
             images: [
                 {
                     caption: "The main menu screen",
@@ -366,4 +493,5 @@ const projectData = [
             ]
         }
     },
+    //#endregion
 ]

@@ -84,6 +84,13 @@ function createModal(project) {
         imageCards += `<div class="modal-image" title="${image.caption}" style="background-image: url(assets/images/${image.url})"></div>`;
     }
 
+    let projectInfo = "";
+    if (project.info.data) {
+        for (data of project.info.data) {
+            projectInfo += (data[0] != '<' ? "<p>" : "") + data + (data[data.length-1] != '>' ? "</p>" : "");
+        }
+    }
+
     let linkButtons = "";
     if (project.info.links) {
         for (link of project.info.links) {
@@ -100,23 +107,19 @@ function createModal(project) {
     <div class="modal-box" style="${primaryStyle} ${secondaryStyle} ${backgroundStyle} ${textStyle}">
         <div class="modal">
             <h1>${project.name}</h1>
-            <h3>Description</h3>
+            <h2>Description</h2>
             <p>
                 ${project.info.description}
             </p>
             <hr>
-            ${ project.info.contributions ? `<h3>Contribution</h3>
-            <p>
-                ${project.info.contributions}
-            </p>
-            <hr>` : ""}
+            ${projectInfo.length > 0 ? projectInfo + `<hr>` : ""}
             <div class="modal-dates">
                 <p>${project.startDate ? "Started on: " + project.startDate.toDateString() : "Project has yet to begin"}</p>
                 <p>${project.endDate ? "Ended on: " + project.endDate.toDateString() : "Project is still ongoing"}</p>
             </div>
             <hr>
             ${ (project.info.links && project.info.links.length != 0) ? 
-            `<h3>Links</h3><div class="link-container">`
+            `<h2>Links</h2><div class="link-container">`
                 + linkButtons +
             `</div><hr>` : ""}
             <div class="modal-button close-modal-button" id="close-${project.id}">Go Back</div>
